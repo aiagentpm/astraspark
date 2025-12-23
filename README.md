@@ -29,17 +29,26 @@ Simply open `astra-spark-minimal.html` in your web browser. No build process req
 
 ### Cloudflare Pages
 
-1. Push this repository to GitHub
-2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/)
-3. Go to **Pages** → **Create a project**
-4. Connect your GitHub repository
-5. Configure build settings:
+The repository is already set up on GitHub at: **https://github.com/aiagentpm/astraspark**
+
+To deploy to Cloudflare Pages:
+
+1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. Go to **Pages** → **Create a project**
+3. Click **Connect to Git**
+4. Select **GitHub** and authorize Cloudflare to access your repositories
+5. Select the `astraspark` repository
+6. Configure build settings:
+   - **Project name**: `astraspark` (or your preferred name)
+   - **Production branch**: `main`
    - **Framework preset**: None
    - **Build command**: (leave empty)
    - **Build output directory**: `/` (root)
-6. Click **Save and Deploy**
+7. Click **Save and Deploy**
 
-Your site will be live at `https://your-project.pages.dev`
+Your site will be live at `https://astraspark.pages.dev` (or your custom project name)
+
+**Note**: The `_headers` file is included for security headers. Cloudflare Pages will automatically apply these headers to all responses.
 
 ### Custom Domain
 
@@ -53,7 +62,8 @@ Your site will be live at `https://your-project.pages.dev`
 .
 ├── astra-spark-minimal.html  # Main HTML file
 ├── README.md                  # This file
-└── .gitignore                # Git ignore file
+├── .gitignore                # Git ignore file
+└── _headers                   # Cloudflare Pages security headers
 ```
 
 ## Browser Support
