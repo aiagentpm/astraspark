@@ -319,141 +319,10 @@
             }
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, var(--tangerine), var(--mint));
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-top: 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            animation: fadeIn 1s ease 2.5s forwards;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 25px rgba(255, 138, 92, 0.4);
-        }
-
         @keyframes fadeIn {
             to {
                 opacity: 1;
             }
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 2rem;
-            min-height: auto;
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 300;
-            text-align: center;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--tangerine), var(--mint));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--charcoal);
-            opacity: 0.6;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-form {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 138, 92, 0.2);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--charcoal);
-            font-weight: 400;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid rgba(255, 138, 92, 0.2);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            color: var(--charcoal);
-            font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--tangerine);
-            box-shadow: 0 0 0 3px rgba(255, 138, 92, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, var(--tangerine), var(--mint));
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
-            font-weight: 400;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 25px rgba(255, 138, 92, 0.4);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
         }
 
         /* Footer */
@@ -553,9 +422,6 @@
                 display: flex;
             }
 
-            .contact-form {
-                padding: 1.5rem;
-            }
         }
 
         /* Accessibility */
@@ -598,8 +464,6 @@
             <a href="#home" class="nav-logo" aria-label="Astra Spark home">Astra Spark</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -623,35 +487,6 @@
                         <span class="pulse" aria-hidden="true"></span>
                         Building our first app
                     </div>
-                    <a href="#contact" class="cta-button">Get in Touch</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact" aria-label="Contact section">
-            <div class="section-container">
-                <div class="contact-container">
-                    <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-                    
-                    <form class="contact-form" id="contactForm" aria-label="Contact form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required aria-required="true" rows="5"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
                 </div>
             </div>
         </section>
@@ -729,36 +564,6 @@
             });
         });
 
-        // Form validation and submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll just show a success message
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            contactForm.reset();
-        });
-
         // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
@@ -773,12 +578,6 @@
                 }
             });
         }, observerOptions);
-
-        // Observe contact section
-        const contactContainer = document.querySelector('.contact-container');
-        if (contactContainer) {
-            observer.observe(contactContainer);
-        }
     </script>
 </body>
 </html>
