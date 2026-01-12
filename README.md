@@ -27,5 +27,5 @@ Simply open `astra-spark-minimal.html` in your web browser. No build process req
 
 ## License
 
-© 2024 Astra Spark. All rights reserved.
+© 2026 Astra Spark. All rights reserved.
 
